@@ -4,7 +4,7 @@ comments: true
 date: 2012-12-07 19:44:27+00:00
 layout: post
 slug: convert-encoding-in-array-by-php-varexport
-title: 巧妙使用php的varexport()函数为数组转换编码
+title: "巧妙使用php的var_export()函数为数组转换编码"
 categories:
 - web
 tags:
