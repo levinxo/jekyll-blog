@@ -11,9 +11,9 @@ tags:
 ---
 
 
-HTTP1.1中有8种请求方式，包括GET、POST、HEAD、CONNECT、TRACE、OPTIONS、PUT、DELETE，其中前四种是最常用的。今天用python模拟了下GET、POST、PUT、DELETE方法。
+HTTP1.1中有8种请求方式，包括GET、POST、HEAD、CONNECT、TRACE、OPTIONS、PUT、DELETE，其中前四种是最常用的。今天用python模拟了下GET、POST、PUT、DELETE方法。<!-- more -->
 
-在所有的请求中，必须带有http头`Host`，比如请求`127.0.0.1:8000`，则`Host`头要写为`Host: 127.0.0.1:8000`。在每个头之间用换行来间隔，头和body之间使用两个换行来间隔。<!-- more -->
+在所有的请求中，必须带有http头`Host`，比如请求`127.0.0.1:8000`，则`Host`头要写为`Host: 127.0.0.1:8000`。在每个头之间用换行来间隔，头和body之间使用两个换行来间隔。
 
 ###GET方法
 
