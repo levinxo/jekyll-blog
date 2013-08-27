@@ -1,4 +1,33 @@
-<div class="pagination">
+<style type="text/css">
+    .pagination-x {
+        text-align: center;
+    }
+    .pagination-x a, .curr-page {
+        border: 1px solid #aeaeae;
+        display: inline-block;
+        margin: 0 3px 0 0;
+        line-height: 20px;
+        text-align: center;
+        color: #333333;
+        border-radius: 2px;
+        text-decoration: none;
+        width: 22px;
+    }
+    .pagination-x a:hover {
+        border: 1px solid #666666;
+        background-color: #ffffff;
+    }
+    .pagination-x span {
+        border: none;
+    }
+    .pagination-x .curr-page {
+        font-weight: bold;
+        width: 15px;
+    }
+</style>
+
+
+<div class="pagination-x">
   <div>
     {% if paginator.page == 1 %}
     <span class="curr-page">&lt;&lt;</span>

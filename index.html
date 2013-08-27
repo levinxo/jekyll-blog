@@ -13,35 +13,4 @@ layout: page
   </div>
 {% endfor %}
 
-{% include JB/posts_paginator %}
-
-<style type="text/css">
-    .pagination {
-        text-align: center;
-    }
-    .pagination a, .curr-page {
-        border: 1px solid #aeaeae;
-        display: inline-block;
-        margin: 0 3px 0 0;
-        line-height: 20px;
-        text-align: center;
-        color: #333333;
-        border-radius: 2px;
-        text-decoration: none;
-        width: 22px;
-    }
-    .pagination a:hover {
-        border: 1px solid #666666;
-        background-color: #ffffff;
-    }
-    .pagination span {
-        border: none;
-    }
-    .pagination .curr-page {
-        font-weight: bold;
-        width: 15px;
-    }
-</style>
-
-<script>
-</script>
+{% include JB/posts_paginator_bs %}
