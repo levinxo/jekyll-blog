@@ -8,3 +8,5 @@
 
 .navbar .brand {font-family: "courier new",monospace;}
 pre {background-color: #f5f5d5;}
+.navbar {position: fixed; top: 0; width: 100%;}
+.page-header {margin-top: 62px;}
