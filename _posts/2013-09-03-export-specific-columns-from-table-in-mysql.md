@@ -55,10 +55,9 @@ tags:
     (`name`, `score`);
 {% endhighlight %}
 
-如果需要`into outfile`能生成可以直接执行的语句在导出时就需要利用`concat`函数做处理
-{% highlight sql %}
-    select concat('(\'', name, '\',\'', score, '\'', '),') from `score` into outfile '/Users/levin/dev/sql/score.sql';
-{% endhighlight %}
+如果需要`into outfile`能生成可以直接执行的语句在导出时就需要利用`concat`函数做处理，注意数据中的`'`需要处理好
+
+        select concat('(\'', replace(name, '\'', '\'\''), '\',\'', score, '\'', '),') from `score` into outfile '/Users/levin/dev/sql/score.sql';
 
 生成的文件内容像这样：
 
