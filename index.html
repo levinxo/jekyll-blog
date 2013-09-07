@@ -2,15 +2,65 @@
 layout: page
 ---
 {% include JB/setup %}
-
 {% for post in paginator.posts %}
-  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-  <p>
-    <span>{{ post.date | date: "%Y-%m-%d %H:%M:%S" }}</span>
-  </p>
-  <div>
-    {{ post.content | split:'<!-- more -->' | first }}<a href="{{ post.url }}">阅读全文</a>
-  </div>
-{% endfor %}
 
+<div style="border-bottom: 1px solid #eee; padding-bottom: 8px;">
+	<h3>
+		<a href="{{ post.url }}">{{ post.title }}</a>
+	</h3>
+
+	<p>
+		<span>{{ post.date | date: "%b %d, %Y" }}</span>
+		<span>in</span>
+		
+		{% assign categories_list = post.categories %}
+	    {% if categories_list.first[0] == null %}
+	      {% for category in categories_list %} 
+	      	<span>
+				<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
+	      		{{ category | join: "/" }}
+	      		</a>
+			</span>
+	      {% endfor %}
+	    {% else %}
+	      {% for category in categories_list %} 
+	      	<span>
+				<a href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category[0] }}-ref">
+	      		{{ category[0] | join: "/" }}
+	      		</a>
+			</span>
+	      {% endfor %}
+	    {% endif %}
+		
+	</p>
+
+	<div class="show">
+		{{ post.content | split: '<!-- more -->' | first }}
+		&nbsp;&nbsp;<a href="{{ post.url }}">阅读全文</a>
+	</div>
+
+	<div class="show">
+	    Tags:&nbsp;
+
+		{% assign tags_list = post.tags %}
+	    {% if tags_list.first[0] == null %}
+	      {% for tag in tags_list %} 
+	      	<span>
+				<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}
+				</a>
+			</span>
+	      {% endfor %}
+	    {% else %}
+	      {% for tag in tags_list %} 
+	      	<span>
+				<a href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}
+				</a>
+			</span>
+	      {% endfor %}
+	    {% endif %}
+
+	</div>
+</div>
+
+{% endfor %}
 {% include JB/posts_paginator_bs %}
