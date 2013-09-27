@@ -8,3 +8,16 @@
 
 .navbar .brand {font-family: "courier new",monospace;}
 pre {background-color: #f5f5d5;}
+
+
+input[name=q] {
+	background-color: #FAFAFA;
+	-webkit-transition: width 0.5s, background-color 0.5s;
+	-moz-transition: width 0.5s, background-color 0.5s;
+}
+
+input[name=q]:focus {
+	background-color: #ffffff;
+	width: 336px;
+}
+
