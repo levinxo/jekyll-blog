@@ -30,6 +30,7 @@ author :
 #
 production_url : http://xlevin.com
 img_url: /assets/uploads/img/
+jump_url: /url.html
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

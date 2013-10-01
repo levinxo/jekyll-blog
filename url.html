@@ -1,0 +1,10 @@
+<p id="goto">don't worry, be happy.</p>
+<script type="text/javascript">
+var url = window.location.href.substring(window.location.href.indexOf('#')+1);
+window.console.info && window.console.info(url);
+var p = document.getElementById('goto');
+if (url != '' && url != window.location.href){
+    p.innerHTML = 'redirect to <a href="'+url+'" target="_self">'+url+'</a>'
+    window.location.href = url;
+}
+</script>
