@@ -21,5 +21,5 @@ tags:
 
 在chrome下开发的，写完插件放ie6试了下，居然完美运行没报错，jquery果然很强大。
 
-附：例子代码放在[Github]({{ site.url_finder }}#https://github.com/levinxo/serendipity/tree/master/jq_waterfall "jquery waterfall plugin source code destination")
+附：例子代码放在[Github]({{ site.url_finder }}https://github.com/levinxo/serendipity/tree/master/jq_waterfall "jquery waterfall plugin source code destination")
 
