@@ -4,11 +4,13 @@
     var disqus_shortname = '{{ site.JB.comments.disqus.short_name }}'; // required: replace example with your forum shortname
     {% if page.wordpress_id %}var disqus_identifier = '{{page.wordpress_id}} {{site.production_url}}/?p={{page.wordpress_id}}';{% endif %}
     /* * * DON'T EDIT BELOW THIS LINE * * */
-    function show_disqus_comments(){
+    function show_disqus_comments(ele){
+        ele.textContent = 'loading...';
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
         (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        window.show_disqus_comments = function(){};
     }
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-<a href="javascript:void(0);" class="dsq-brlink" onclick="show_disqus_comments();">Show comments / Post comment</a>
+<a href="javascript:void(0);" class="dsq-brlink" onclick="show_disqus_comments(this);">Show comments / Post comment</a>
