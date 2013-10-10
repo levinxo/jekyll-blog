@@ -28,3 +28,12 @@ jekyll的<a href="http://jekyllrb.com/docs/pagination/" rel="nofollow">分页插
 <a href="http://git.io/zpcrXA" rel="nofollow">这里</a>。
 
 如果拿来用，最好是改造下，修改相应的标签和class以便于直接使用自己主题的分页样式。
+
+***
+更新于2013-10-10：
+
+上面的分页样式是自己写的样式，目前新增了使用bootstrap的分页样式，更契合博客的主题一点。
+
+代码地址在：[这里]({{ site.url_finder }}https://github.com/levinxo/levinxo.github.io/blob/master/_includes/JB/posts_paginator_bs "jekyll主页分页插件")
+
+
