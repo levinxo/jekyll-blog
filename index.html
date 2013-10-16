@@ -12,6 +12,7 @@ layout: page
 	<p>
 		<span>{{ post.date | date: "%b %d, %Y" }}</span>
 		<span>in</span>
+        <i class="icon-folder-open"></i>
 		
 		{% assign categories_list = post.categories %}
 	    {% if categories_list.first[0] == null %}
@@ -36,11 +37,14 @@ layout: page
 
 	<div class="show" style="padding: 10px 0;">
 		{{ post.content | split: '<!-- more -->' | first }}
-		&nbsp;&nbsp;<a href="{{ post.url }}">阅读全文</a>
+        <p class="text-right" style="margin: 0; padding: 0 40px;">
+          <a href="{{ post.url }}">阅读全文</a>
+        </p>
 	</div>
 
 	<div class="show">
-	    Tags:&nbsp;
+	    <i class="icon-tags"></i>
+        Tags:&nbsp;
 
 		{% assign tags_list = post.tags %}
 	    {% if tags_list.first[0] == null %}

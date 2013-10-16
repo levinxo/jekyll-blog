@@ -21,3 +21,24 @@ input[name=q]:focus {
 	width: 336px;
 }
 
+.content {
+    margin-bottom: 30px;
+}
+
+.content .page-header {
+    padding: 5px 0 30px;
+}
+
+.content .date {
+    display: inline;
+    float: right;
+    color: #666666;
+    font-weight: normal;
+    padding: 30px;
+}
+
+.content .post-title {
+    padding-left: 25px;
+    -webkit-transform: rotate(-2.5deg);
+    -moz-transform: rotate(-2.5deg);
+}

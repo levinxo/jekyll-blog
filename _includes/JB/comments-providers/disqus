@@ -13,4 +13,7 @@
     }
 </script>
 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-<a href="javascript:void(0);" class="dsq-brlink" onclick="show_disqus_comments(this);">Show comments / Post comment</a>
+
+<a href="javascript:void(0);" class="dsq-brlink" onclick="show_disqus_comments(this);">
+<i class="icon-comment"></i>
+Show comments / Post comment</a>
