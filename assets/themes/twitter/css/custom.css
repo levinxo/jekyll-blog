@@ -9,6 +9,9 @@
 .navbar .brand {font-family: "courier new",monospace;}
 pre {background-color: #f5f5d5;}
 
+i {
+    opacity: 0.9;
+}
 
 input[name=q] {
 	background-color: #FAFAFA;
