@@ -26,3 +26,15 @@ categories:
 折腾了一个星期将近，决定了openshift，毕竟是redhat的，可靠性应该不错。做了选择，就开始动手，安装php应用，mysql数据库，架设wordpress，制作密钥，绑定域名，重定向域名，终于搞定。
 
 谨以此文纪念我折腾云服务的小插曲。
+
+
+***
+更新于2013-10-20：
+
+用了小红帽家的openshift大概4个月吧，到了今年3月的时候，openshift很难连接上了，
+查看[openshift服务器状态]({{ site.url_finder }}https://openshift.redhat.com/app/status)却是`No open issues`。
+所以被迫将[博客转移到了sae]({{ site.production_url }}/2013/03/16/my-blog-moved-to-sae-from-rhcloud/)上，挥泪告别可爱的小红帽。
+
+在7月份的时候，觉得wordpress写博客不够有趣，而且sae又无法在不备案的情况下真正地绑定域名，
+所以就将[博客转移到了github]({{ site.production_url }}/2013/07/28/my-pagination-on-homepage-base-on-jekyll-pagination-plugin/)，
+目前为止运行状态良好。
