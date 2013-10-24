@@ -28,7 +28,7 @@ categories:
 试着用curl构造这个`referer`来访问那张图片所在的地址：
 
 {% highlight bash %}
-    $ curl -H "Referer: http://user.qzone.qq.com/qq号码/infocenter;" 此处是图片的链接 > qzone.png
+    $ curl -H "Referer: http://user.qzone.qq.com/qq号码/infocenter" 此处是图片的链接 > qzone.png
     $ open qzone.png
 {% endhighlight %}
 
