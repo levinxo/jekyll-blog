@@ -33,3 +33,20 @@ tags:
         }
 
 完。
+
+***
+更新于2013-11-06：
+
+上面写的在apache下301重定向代码有点问题，当网址中出现路径时，
+路径是不会被传递到新地址上去的，只有query string(即?后面的参数)会被传递，
+所以更正如下：
+
+        <IfModule mod_rewrite.c>
+        RewriteEngine On
+
+        RewriteCond %{HTTP_HOST} ^geeklevin.com$
+        RewriteRule ^.*$ http://www.geeklevin.com%{REQUEST_URI} [R=301,L]
+        </IfModule>
+        
+服务器变量REQUEST_URI包含了请求的path和query string。
+
