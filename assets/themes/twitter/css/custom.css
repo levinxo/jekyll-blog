@@ -22,7 +22,7 @@ input[name=q]:focus {
 	background-color: #ffffff;
 }
 
-.article h1,.article h2,.article h3,.article h4,.article h5,.article p {
+.article p {
     text-indent: 2em;
 }
 
