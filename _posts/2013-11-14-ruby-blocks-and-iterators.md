@@ -3,7 +3,7 @@ author: levin
 comments: true
 date: 2013-11-14 22:34:22+08:00
 layout: post
-title: "ruby的blocks和迭代器"
+title: "ruby的block"
 categories:
 - 编程语言
 tags:
