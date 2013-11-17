@@ -1,7 +1,7 @@
 <div class="page-header">
   <p class="date">
     <i class="icon-time"></i>
-    {{ page.date | date: "%B %d, %Y %H:%M" }}
+    {{ page.date | date: "%B %d, %Y" }}
   </p>
   <h2 class="post-title"><a href="{{ page.url | append:'/' }}">{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</a></h2>
 </div>
