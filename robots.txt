@@ -5,4 +5,4 @@ Disallow: /url.html
 Disallow: /2013/
 Disallow: /2012/
 
-Sitemap: http://xlevin.com/sitemap.txt
+Sitemap: http://www.reedless.com/sitemap.txt
