@@ -26,16 +26,26 @@ tags:
         LoadModule wsgi_module modules/mod_wsgi.so
         Include conf/extra/httpd-vhosts.conf
 
-编辑extra/httpd-vhosts.conf新建项目：
+编辑extra/httpd-vhosts.conf新建项目并增加gzip压缩python输出的文本：
 
-        WSGIScriptAlias /webapp /Users/levin/dev/py/webapp/app.py/
-        Alias /webapp/static /Users/levin/dev/py/webapp/static/     #静态文件
-        AddType text/html .py
+        Listen 8001
         
-        <Directory /Users/levin/dev/py/webapp/>
-            Order deny,allow
-            Allow from all
-        </Directory>
+        <VirtualHost *:8001>
+            WSGIScriptAlias / /Users/levin/dev/py/webapp/app.py/
+            Alias /assets /Users/levin/dev/py/webapp/static/
+            AddType text/html .py 
+            <Directory /Users/levin/dev/py/webapp/>
+                Order deny,allow
+                Allow from all 
+                SetOutputFilter DEFLATE             #开启gzip
+                SetEnvIfNoCase Request_URI .(?:gif|jpe?g|png)$ no-gzip dont-vary            #图片不开启gzip
+                SetEnvIfNoCase Request_URI .(?:exe|t?gz|zip|bz2|rar)$ no-gzip dont-vary     #压缩包不开启gzip
+                SetEnvIfNoCase Request_URI .(?:pdf|doc)$ no-gzip dont-vary
+                AddOutputFilterByType DEFLATE text/*
+                AddOutputFilterByType DEFLATE application/javascript application/x-javascript application/xml
+                AddOutputFilterByType DEFLATE application/x-httpd-php
+            </Directory>
+        </VirtualHost>
 
 先写个测试脚本app.py
 
@@ -66,7 +76,7 @@ tags:
 {% endhighlight %}
 
 在浏览器中访问：
-http://localhost:*8000*/webapp，看到*Hello, world.*就算安装成功了。
+http://localhost:*8001*/，看到*Hello, world.*就算安装成功了。
 
 参考：
 
